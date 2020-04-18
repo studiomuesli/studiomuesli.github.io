@@ -59,9 +59,9 @@ html, body {
   white-space: nowrap;
 }
 
-.marquee img {
+/* .marquee img {
   width: 400px;
-}
+} */
 
 /* @media (max-width: 599px) {
   .marquee img {
