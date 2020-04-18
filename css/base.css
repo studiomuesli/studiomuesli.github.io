@@ -53,10 +53,11 @@ a {
 
 .marquee {
   position: relative;
-  overflow: hidden;
+  position: relative;
+    /* overflow: hidden; */
   --offset: 20vw;
-  --move-initial: calc(-25% + var(--offset));
-  --move-final: calc(-50% + var(--offset));
+  --move-initial: calc(-10% + var(--offset));
+  --move-final: calc(15% + var(--offset));
 }
 
 .marquee__inner {
