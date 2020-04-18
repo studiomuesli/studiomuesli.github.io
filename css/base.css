@@ -52,17 +52,17 @@ html, body {
   /* animation-play-state: paused; */
 }
 
-.marquee span {
-  font-size: 2vw;
-  padding: 0 1vw;
-  font-weight: 500;
-  white-space: nowrap;
+.marquee-span {
+  width: 300px;
+  height: 100px;
+  background-image: url("../img/Studio_Joseph_Gardner_Logo.png");
+  background-size: 300px;
+  background-repeat: no-repeat;
 }
 
-.marquee__inner img {
+/* .marquee__inner img {
   width: 300px;
-  width: 50px;
-}
+} */
 
 /* @media (max-width: 599px) {
   .marquee img {
