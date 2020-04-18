@@ -63,11 +63,11 @@ html, body {
   width: 400px;
 }
 
-@media (max-width: 599px) {
+/* @media (max-width: 599px) {
   .marquee img {
     width: 250px;
   }
-}
+} */
 
 .image {
   pointer-events: none;
