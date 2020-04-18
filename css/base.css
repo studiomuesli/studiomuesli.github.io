@@ -17,7 +17,7 @@ html, body {
   --color-link: #000;
   --color-link-hover: #000;
   color: var(--color-text);
-  background-color: var(--color-bg);
+  /* background-color: var(--color-bg); */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: sofia-pro, sans-serif;
@@ -49,7 +49,7 @@ html, body {
 }
 
 .marquee:hover .marquee__inner {
-  animation-play-state: paused;
+  /* animation-play-state: paused; */
 }
 
 .marquee span {
@@ -65,10 +65,25 @@ html, body {
 
 @media (max-width: 599px) {
   .marquee img {
-    width: 300px;
+    width: 250px;
   }
 }
 
+.image {
+  pointer-events: none;
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  transform: translate3d(0,20px,0);
+  transition: all 0.4s;
+  height: 400px;
+}
+
+.marquee:hover + .image {
+  opacity: 1;
+  transform: translate3d(0,0,0);
+	transition: all 0.4s;
+}
 
 
 @keyframes marquee {
