@@ -60,7 +60,8 @@ html, body {
 }
 
 .marquee__inner img {
-  width: 400px;
+  width: 300px;
+  width: 50px;
 }
 
 /* @media (max-width: 599px) {
