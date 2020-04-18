@@ -8,15 +8,10 @@
   font-size: 15px;
 }
 
-html {
+html, body {
   height: 100%;
-  width: 100%;
+  max-width: 100%;
   margin: 0;
-}
-
-body {
-  height: 100%;
-  width: 100%;
   --color-text: #111;
   --color-bg: #fff;
   --color-link: #000;
@@ -36,17 +31,12 @@ body {
   width: 100%;
 }
 
-a {
-  text-decoration: none;
-  color: var(--color-link);
-  outline: none;
-}
-
 .marquee {
   position: relative;
-  --offset: 20vw;
-  --move-initial: calc(-10% + var(--offset));
-  --move-final: calc(15% + var(--offset));
+  overflow: hidden;
+  --offset: 1vw;
+  --move-initial: calc(-25% + var(--offset));
+  --move-final: calc(0% + var(--offset));
 }
 
 .marquee__inner {
@@ -58,6 +48,10 @@ a {
   animation-play-state: running;
 }
 
+.marquee:hover .marquee__inner {
+  animation-play-state: paused;
+}
+
 .marquee span {
   font-size: 2vw;
   padding: 0 1vw;
@@ -66,11 +60,13 @@ a {
 }
 
 .marquee img {
-width: 300px;
+  width: 450px;
 }
 
-.marquee:hover .marquee__inner {
-  animation-play-state: paused;
+@media (max-width: 599px) {
+  .marquee img {
+    width: 300px;
+  }
 }
 
 
