@@ -44,8 +44,6 @@ a {
 
 .marquee {
   position: relative;
-  position: relative;
-    /* overflow: hidden; */
   --offset: 20vw;
   --move-initial: calc(-10% + var(--offset));
   --move-final: calc(15% + var(--offset));
