@@ -59,9 +59,9 @@ html, body {
   white-space: nowrap;
 }
 
-/* .marquee img {
+.marquee__inner img {
   width: 400px;
-} */
+}
 
 /* @media (max-width: 599px) {
   .marquee img {
@@ -75,7 +75,7 @@ html, body {
   opacity: 0;
   z-index: -1;
   transform: translate3d(0,20px,0);
-  transition: all 0.4s;
+  /* transition: all 0.4s; */
   height: 400px;
 }
 
