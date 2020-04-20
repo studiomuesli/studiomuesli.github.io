@@ -44,7 +44,7 @@ html, body {
   display: flex;
   position: relative;
   transform: translate3d(var(--move-initial), 0, 0);
-  animation: marquee 20s linear infinite;
+  animation: marquee 15s linear infinite;
   animation-play-state: running;
   align-items: center;
   height: 400px;
@@ -79,13 +79,6 @@ html, body {
   justify-content: center;
   margin-right: 3em;
 }
-
-
-/* @media (max-width: 599px) {
-  .marquee img {
-    width: 250px;
-  }
-} */
 
 .content-image {
   pointer-events: none;
