@@ -27,14 +27,14 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 95%;
+  height: 100%;
   width: 100%;
 }
 
 .marquee {
   position: relative;
   overflow: hidden;
-  --offset: 1vw;
+  --offset: 6vw;
   --move-initial: calc(-25% + var(--offset));
   --move-final: calc(0% + var(--offset));
 }
@@ -44,25 +44,42 @@ html, body {
   display: flex;
   position: relative;
   transform: translate3d(var(--move-initial), 0, 0);
-  animation: marquee 7s linear infinite;
+  animation: marquee 20s linear infinite;
   animation-play-state: running;
+  align-items: center;
+  height: 400px;
 }
 
 .marquee:hover .marquee__inner {
   /* animation-play-state: paused; */
 }
 
-.marquee-span {
+.marquee-logo {
   width: 300px;
-  height: 100px;
+  height: 50px;
   background-image: url("../img/Studio_Joseph_Gardner_Logo.png");
   background-size: 300px;
   background-repeat: no-repeat;
+  padding-left: 0;
+  margin-left: 0;
+  position: relative;
 }
 
-/* .marquee__inner img {
-  width: 300px;
-} */
+.marquee-text {
+  white-space: nowrap;
+  font-size: 1.4em;
+
+}
+
+.project {
+  width: fit-content;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin-right: 3em;
+}
+
 
 /* @media (max-width: 599px) {
   .marquee img {
@@ -70,22 +87,20 @@ html, body {
   }
 } */
 
-.image {
+.content-image {
   pointer-events: none;
   position: absolute;
   opacity: 0;
   z-index: -1;
   transform: translate3d(0,20px,0);
-  /* transition: all 0.4s; */
   height: 400px;
 }
 
-.marquee:hover + .image {
+.project:hover > .content-image {
   opacity: 1;
   transform: translate3d(0,0,0);
 	transition: all 0.4s;
 }
-
 
 @keyframes marquee {
   0% {
@@ -96,3 +111,14 @@ html, body {
     transform: translate3d(var(--move-final), 0, 0);
   }
 }
+
+.fade-in {
+	opacity:0;  /* make things invisible upon start */
+	animation: ease-in 1;
+	animation-fill-mode: forwards;
+	animation-duration:1s;
+  animation-name: fadeIn;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
