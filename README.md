@@ -1,2 +1,2 @@
 # studiojosephgardener
-View [studiomuesli.github.io](https://studiomuesli.github.io){:target="_blank"}
+View [studiomuesli.github.io](https://studiomuesli.github.io) {:target="_blank"}
